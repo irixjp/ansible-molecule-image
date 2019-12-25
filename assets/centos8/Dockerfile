@@ -4,7 +4,7 @@ LABEL maintainer "@irix_jp"
 
 RUN dnf makecache && \
     dnf update -y && \
-    dnf --assumeyes install sudo which openssh-server iproute && \
+    dnf --assumeyes install sudo which openssh-server iproute httpd && \
     dnf clean all
 
 ENV ANSIBLE_USER=ansible SUDO_GROUP=wheel DEPLOY_GROUP=deployer

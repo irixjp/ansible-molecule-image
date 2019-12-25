@@ -6,6 +6,7 @@ RUN yum makecache fast && \
     yum update -y && \
     yum install -y python sudo yum-plugin-ovl bash iproute && \
     yum install -y which openssh-server && \
+    yum install -y httpd && \
     sed -i 's/plugins=0/plugins=1/g' /etc/yum.conf && \
     yum clean all
 
